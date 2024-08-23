@@ -116,15 +116,19 @@ const QRCodeGenerator = () => {
   };
 
   const handleDownload = (format) => {
+    const generateUniqueId = () => Date.now(); // Generate a unique ID
+
     html2canvas(document.getElementById('qrCode')).then((canvas) => {
+      const uniqueId = generateUniqueId(); // Get a unique ID
+
       if (format === 'pdf') {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF();
         pdf.addImage(imgData, 'PNG', 10, 10);
-        pdf.save('qr-code.pdf');
+        pdf.save(`qr-code-${uniqueId}.pdf`); // Save with unique ID
       } else {
         const link = document.createElement('a');
-        link.download = `qr-code.${format}`;
+        link.download = `qr-code-${uniqueId}.${format}`; // Save with unique ID
         link.href = canvas.toDataURL(`image/${format}`);
         link.click();
       }
