@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    display: flex;
+    width: 80%;
+    min-height: 90vh;
+    gap: 10px;
+}
+
+.col1 {
+    background-color: #fff;
+    flex: 2;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+}
+
+.col2 {
+    background-color: #fff;
+    flex: 1;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.options {
+    display: flex;
+    margin-bottom: 30px;
+    width: 100%;
+    flex-direction: column; /* Ensure options are stacked vertically */
+}
+
+.options ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.options li {
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer; 
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+.selected {
+    background-color: #ddd;
+}
+
+.qr-container {
+    display: flex;
+    align-items: center;
+    position: relative; /* Make sure position is relative for the overlay */
+}
+
+.qr-container.greyed-out {
+    filter: grayscale(100%) opacity(50%);
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.color-selectors {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.color-selectors label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.color-selectors input[type="color"] {
+    margin-left: 10px;
+    border: none;
+    padding: 0;
+    cursor: pointer; /* Change cursor to pointer for color inputs */
+}
+
+.action-btns {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-label {
+    padding: 2px 15px;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+.redo-btn {
+    display: none;
+}
+
+.more-btn {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    max-height: 20px;
+    color: grey;
+    border: none;
+    background-color: transparent;
+    padding: 10px 25px;
+    gap: 10px;
+}
+
+.more-icon {
+    font-size: 20px;
+    padding: 5px;
+    background-color: transparent;
+    color: grey;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+}
+
+.more-icon:hover {
+    color: white;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+/* Media query for devices with width up to 1000px */
+@media only screen and (max-width: 1000px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .resp-col {
+        display: none;
+    }
+    .unresp-col {
+        display: none;
+    }
+    .redo-btn {
+        display: block;
+        font-size: 20px;
+        padding: 5px 10px;
+        background-color: rgb(168, 168, 168);
+        border: none;
+        color: #fff;
+    }
+    .redo-btn:hover {
+        background-color: grey;
+    }
+    .options-select {
+        display: none;
+    }
+}
+
+/* Media query for devices with width up to 768px */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .options-list {
+        display: none; /* Hide the unordered list on mobile screens */
+    }
+    
+    .options-select {
+        display: block; /* Show select menu on mobile screens */
+        width: 100%; /* Ensure it takes full width on mobile */
+        margin-bottom: 1rem; /* Add some spacing */
+    }
+}

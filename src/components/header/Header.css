@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.header{
+    height: 70px;
+    background-color: white;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.2);
+    display: flex;
+    gap: 10px;
+    padding-inline-start: 40px;
+    color: rgb(63, 62, 62);
+    align-items: center;
+}
+.header span{
+    font-size: 25px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(63, 62, 62);
+}
+.header p{
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(63, 62, 62);
+}
+@media only screen and (max-width: 768px){
+    .header span, .header p{
+        display: none;
+    }
+}

@@ -1,0 +1,19 @@
+.names{
+    display: flex;
+    gap: 30px;
+}
+.label-res{
+    display: none;
+}
+@media only screen and (max-width: 1024px){
+    .names{
+        flex-direction: column;
+        gap: 0;
+    }
+    .label-res{
+        display: block;
+    }
+    .not-res{
+        display: none;
+    }
+}

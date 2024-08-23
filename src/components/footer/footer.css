@@ -1,0 +1,36 @@
+.footer{
+    width: 100%;
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgb(38, 39, 38);
+}
+.footer p{
+    display: flex;
+    font-size: 12px;
+    font-style: italic;
+    color: white;
+}
+.footer-tg{
+    display: flex;
+    color: white;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+@media only screen and (max-width: 768px){
+    .footer-tg{
+        font-size: 18px;
+    }
+    .footer p{
+        font-size: 10px;
+    }
+}

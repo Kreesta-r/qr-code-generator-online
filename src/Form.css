@@ -1,0 +1,38 @@
+.input{
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 18px;
+    color: #444;
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+}
+textarea{
+    min-height: 100px;
+}
+.text-input{
+    margin-top: 100px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #929292 ;
+}
+.mecard-name{
+    display: flex;
+    gap: 20px;
+}
+.mecard-name input{
+    width: 96%;
+}
+.url-input{
+    border: none;
+    border-radius: 0;
+    border-bottom: #444;
+}
+
+@media only screen and (max-width: 1024px){
+    .mecard-name{
+        flex-direction: column;
+        gap: 0;
+    }
+}
